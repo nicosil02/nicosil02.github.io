@@ -11,8 +11,8 @@
 }
 
 /* Idioma: solo se ve el elegido */
-html[data-lang="es"] [lang="en"],
-html[data-lang="en"] [lang="es"] { display: none !important; }
+html[data-lang="es"] [data-l="en"],
+html[data-lang="en"] [data-l="es"] { display: none !important; }
 
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--serif); font-size: 19px; line-height: 1.6; }
