@@ -125,3 +125,17 @@ mark { color: var(--tinta); background: linear-gradient(transparent 62%, rgba(24
   .js .aparece { opacity: 1; transform: none; }
   mark { background-size: 100% 100%; }
 }
+
+/* Proyectos compactos: el primero ocupa todo el ancho, el resto en dos columnas */
+.grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 28px; }
+.grilla .proyecto { display: block; padding: 0; margin: 0; border: 0; }
+.grilla .proyecto > a { margin-bottom: 14px; }
+.grilla .proyecto img { aspect-ratio: 4 / 3; }
+.grilla .proyecto h3 { font-size: 22px; }
+.grilla .proyecto p:not(.etiqueta):not(.enlaces) { font-size: 16px; line-height: 1.5; margin-bottom: 8px; }
+.grilla .proyecto:first-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+.grilla .proyecto:first-child > a { margin: 0; }
+.grilla .proyecto:first-child h3 { font-size: 26px; }
+@media (max-width: 640px) {
+  .grilla, .grilla .proyecto:first-child { grid-template-columns: 1fr; gap: 32px; }
+}

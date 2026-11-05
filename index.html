@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheet.css?v=2">
+  <link rel="stylesheet" href="stylesheet.css?v=3">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -59,6 +59,7 @@
   <section id="proyectos">
     <h2><span data-l="es">Proyectos</span><span data-l="en">Projects</span></h2>
 
+    <div class="grilla">
     <article class="proyecto aparece">
       <a href="https://nicosil02.github.io/puntos-negros/"><img src="images/puntos-negros.jpg" alt="Mapa de puntos negros de siniestros fatales en el Perú"></a>
       <div>
@@ -81,7 +82,7 @@
     </article>
 
     <article class="proyecto aparece">
-      <a href="https://nicosil02.github.io/obras-de-salida/"><img class="blanco" src="images/obras-de-salida.jpg" alt="Gasto municipal en obras en cada año de elecciones"></a>
+      <a href="https://nicosil02.github.io/obras-de-salida/"><img src="images/obras-thumb.jpg" alt="Gasto municipal en obras en cada año de elecciones"></a>
       <div>
       <p class="etiqueta">Python · MEF · ONPE · JNE</p>
       <h3><span data-l="es">Obras de salida</span><span data-l="en">Exit works</span></h3>
@@ -101,7 +102,7 @@
     </article>
 
     <article class="proyecto aparece">
-      <a href="https://github.com/nicosil02/enaho-skills"><img class="blanco" src="images/enaho-mapa.png" alt="Mapa de pobreza monetaria por departamento, 2024"></a>
+      <a href="https://github.com/nicosil02/enaho-skills"><img src="images/enaho-thumb.jpg" alt="Mapa de pobreza monetaria por departamento, 2024"></a>
       <div>
       <p class="etiqueta">Claude Code · Python · INEI</p>
       <h3><span data-l="es">Un agente que replica la pobreza oficial</span><span data-l="en">An agent that replicates official poverty</span></h3>
@@ -120,21 +121,53 @@
       </div>
     </article>
 
-    <p class="otros">
-      <span data-l="es">Otros proyectos.</span><span data-l="en">Other projects.</span>
-      <a href="https://github.com/nicosil02/mcp-bcrp"><span data-l="es">Un servidor MCP con las series del BCRP</span><span data-l="en">An MCP server for central bank data</span></a>
-      <span data-l="es">(Claude acierta 10 de 10 cifras oficiales con él y ninguna sin él)</span><span data-l="en">(Claude gets 10 of 10 official figures with it, none without it)</span>
-      ·
-      <a href="https://github.com/nicosil02/incendios-chacras-peru"><span data-l="es">Qué se quemó en Characato</span><span data-l="en">What burned in Characato</span></a>
-      <span data-l="es">(153 hectáreas medidas con Sentinel-2)</span><span data-l="en">(153 hectares measured with Sentinel-2)</span>
-    </p>
+    <article class="proyecto aparece">
+      <a href="https://github.com/nicosil02/mcp-bcrp"><img src="images/mcp-thumb.jpg" alt="Aciertos de Claude con y sin el servidor MCP del BCRP"></a>
+      <div>
+      <p class="etiqueta">Python · FastMCP · BCRP</p>
+      <h3><span data-l="es">Un MCP con las series del BCRP</span><span data-l="en">An MCP server for Peru's central bank data</span></h3>
+      <p>
+        <span data-l="es"><b>Pregunta.</b> ¿Cuántas cifras oficiales del BCRP acierta Claude con un servidor propio y cuántas sin él?</span>
+        <span data-l="en"><b>Question.</b> How many official central bank figures does Claude get right with a custom server, and how many without it?</span>
+      </p>
+      <p>
+        <span data-l="es"><b>Resultado.</b> Con el servidor acierta <mark>10 de 10</mark>, y 30 de 30 al repetirlo tres veces. Sin herramientas no acierta ninguna y con búsqueda web acierta 9.</span>
+        <span data-l="en"><b>Result.</b> With the server it gets <mark>10 out of 10</mark>, and 30 out of 30 over three runs. With no tools it gets none, and with web search it gets 9.</span>
+      </p>
+      <p class="enlaces">
+        <a href="https://github.com/nicosil02/mcp-bcrp"><span data-l="es">Código</span><span data-l="en">Code</span></a>
+        <a href="https://github.com/nicosil02/mcp-bcrp/blob/main/informe.md"><span data-l="es">Informe</span><span data-l="en">Report</span></a>
+      </p>
+      </div>
+    </article>
+
+    <article class="proyecto aparece">
+      <a href="https://github.com/nicosil02/incendios-chacras-peru"><img src="images/incendios-thumb.jpg" alt="Área quemada en Characato sobre el mapa de cobertura del suelo"></a>
+      <div>
+      <p class="etiqueta">Python · Sentinel-2 · NASA FIRMS</p>
+      <h3><span data-l="es">¿Qué se quemó en Characato?</span><span data-l="en">What burned in Characato?</span></h3>
+      <p>
+        <span data-l="es"><b>Pregunta.</b> Cuando arde un incendio en el Perú, ¿qué se quema, pastizal, matorral o chacras?</span>
+        <span data-l="en"><b>Question.</b> When a wildfire burns in Peru, what burns, grassland, shrubland or farmland?</span>
+      </p>
+      <p>
+        <span data-l="es"><b>Resultado.</b> En Characato (Arequipa, octubre de 2026) ardieron <mark>153 hectáreas</mark>, 71% de matorral y 7 de cultivo. A un kilómetro o menos del fuego quedan 65 hectáreas de chacras.</span>
+        <span data-l="en"><b>Result.</b> In Characato (Arequipa, October 2026) <mark>153 hectares</mark> burned, 71% shrubland and 7 of cropland. Within one kilometer of the fire there are 65 hectares of farmland.</span>
+      </p>
+      <p class="enlaces">
+        <a href="https://github.com/nicosil02/incendios-chacras-peru"><span data-l="es">Código</span><span data-l="en">Code</span></a>
+        <a href="images/incendios.png"><span data-l="es">Mapa</span><span data-l="en">Map</span></a>
+      </p>
+      </div>
+    </article>
+    </div>
   </section>
 
   <section id="video" class="aparece">
     <h2><span data-l="es">Video y demo</span><span data-l="en">Video and demo</span></h2>
     <p class="nota">
-      <span data-l="es">El reel de Puntos negros. La narración es mi voz clonada con IA.</span>
-      <span data-l="en">The Black spots reel, in Spanish. The narration is my voice, cloned with AI.</span>
+      <span data-l="es">El reel de Puntos negros.</span>
+      <span data-l="en">The Black spots reel, in Spanish.</span>
     </p>
     <iframe class="reel" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7522435075381022720" title="Reel de Puntos negros en LinkedIn" allowfullscreen></iframe>
     <p class="nota">
